@@ -13,7 +13,7 @@
 		주사위 1 ~ 6
 */
 
-#include <stdio.h>
+#include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 
@@ -28,16 +28,17 @@ void main(void)
 
 	printf("현재위치 : %d\n\n", position);
 
-	//주사위는 1 ~ 6까지 나오게 설정
-	dice = rand() % 6 + 1;
-	printf("주사위를 던져서 %d가 나왔습니다.\n\n", dice);
-	position += dice;
-	printf("현재위치 : %d\n\n", position);
+	//무한반복
+	while (1)
+	{
+		/*던짐*/
+		//주사위는 1 ~ 6까지 나오게 설정
+		dice = rand() % 6 + 1;
+		printf("주사위를 던져서 %d가 나왔습니다.\n", dice);
 
-	//주사위는 1 ~ 6까지 나오게 설정
-	dice = rand() % 6 + 1;
-	printf("주사위를 던져서 %d가 나왔습니다.\n\n", dice);
-	position += dice;
-	printf("현재위치 : %d\n\n", position);
-
+		//던진 주사위값을 현재 위치에 적용
+		position += dice;
+		printf("현재위치 : %d\n\n", position);
+		getchar();
+	}
 }
