@@ -21,10 +21,17 @@ void main(void)
 {
 	//플레이어의 위치(0부터 시작)
 	int position = 0;
+	//주사위
 	int dice;
 
 	srand(time(0));
-	dice = rand() % 6 + 1;
 
-	printf("%d\n", dice);
+	printf("현재위치 : %d\n\n", position);
+
+	//주사위는 1 ~ 6까지 나오게 설정
+	dice = rand() % 6 + 1;
+	printf("주사위를 던져서 %d가 나왔습니다.\n\n", dice);
+	position += dice;
+	printf("현재위치 : %d\n\n", position);
+
 }
