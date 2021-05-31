@@ -66,9 +66,12 @@ void main(void)
 			printf("현재 위치 : %d, 현재금액 : %lld\n\n", position, money);
 			break;
 
-		case 60:
-			printf("축하합니다.화성에 도착하셨습니다.");
-			break;
+		}
+		/*범위를 설정해야하는 것은 switch가 안됨*/
+		if (position > 60)
+		{
+			printf("축하합니다. 목적지에 도착하셨습니다.\n");
+				break;
 		}
 	}
 }
