@@ -2,14 +2,18 @@
 
 void main(void)
 {
-	int num = 0;
-
-	while (num <5)
+	for(int num = 0; num<5;)
 	{
-		//if (num == 5)
-			//break;
-
 		printf("Âû½º Charles\n");
 		num++;
 	}
+	/*
+	int num = 0
+
+	while(num<5)
+	{
+	printf("Âû½º Charles\n");
+	num++;
+	}
+	*/
 }
