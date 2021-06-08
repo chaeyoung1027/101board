@@ -24,8 +24,8 @@ void main(void)
 	int position = 0;
 	// 주사위
 	int dice;
-	//공간의 끝 점
-	int finish=60;
+	// 공간의 끝 점
+	const int finish = 60;
 	// 돈은 2천만부터 시작
 	int money = 20000000;
 
@@ -75,13 +75,25 @@ void main(void)
 			printf("현재위치 : %d, 현재금액 : %d \n\n", position, money);
 			break;
 
+			// 3턴동안 움직이지 못함
+		case 49:
+			printf("*위치 49*에 있을때, 3턴동안 움직일 수 없습니다.\n");
+			for (int i = 1; i <= 3; i++)
+			{
+				getchar();
+				printf("%d 턴입니다.",i);
+			}
+			printf("무인도에서 탈출하셨습니다.\n");
+			money = (int)(money * 0.8);
+			printf("현재위치 : %d, 현재금액 : %d \n\n", position, money);
+
+			break;
+
 		case 59:
-			printf("위치 59에 있을때, 처음 지점으로 돌아갑니다.\n");
+			printf("*위치 59*에 있을때, 처음 지점으로 돌아갑니다.\n");
 			position = 0;
 			printf("현재위치 : %d, 현재금액 : %d \n\n", position, money);
 			break;
-
-
 		}
 		if (position == finish)
 		{
@@ -89,7 +101,6 @@ void main(void)
 			money *= 2;
 			printf("현재위치 : %d, 현재금액 : %d \n\n", position, money);
 		}
-
 
 		// 범위를 지정해야 하는 조건에는 switch문이 불가능하다
 		if (position > finish)
