@@ -49,7 +49,7 @@ void main(void)
 		printf("현재위치 : %d, 현재금액 : %d \n\n", position, money);
 
 		// TEST CODE
-		// position = 10;
+		position = 49;
 
 		switch (position)
 		{
@@ -81,22 +81,19 @@ void main(void)
 			for (int i = 1; i <= 3; i++)
 			{
 				getchar();
-				printf("%d 턴입니다.",i);
-				dice = rand() % 6 + 1;
-				printf("주사위가 %d가 나왔습니다.\n", dice);
-				
+				printf("%d 턴입니다.\n", i);
+				int exit_dice = rand() % 6 + 1;
+				printf("주사위가 %d가 나왔습니다.\n", exit_dice);
 
-				//주사위를 던져서 3이 나오면 무인도를 탈출
-				if (dice == 3)
+				// 주사위를 던져서 3이 나오면 무인도를 탈출
+				if (exit_dice == 3)
 				{
-					printf("축하합니다 %d가 나왔습니다.", dice);
+					printf("축하합니다 %d이(가) 나왔습니다.", exit_dice);
 					break;
 				}
 			}
-			printf("무인도에서 탈출하셨습니다.\n");
-			money = (int)(money * 0.8);
+			printf("무인도를 탈출하였습니다. \n");
 			printf("현재위치 : %d, 현재금액 : %d \n\n", position, money);
-
 			break;
 
 		case 59:
