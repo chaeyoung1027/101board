@@ -2,8 +2,11 @@
 
 void main(void)
 {
-	int dan = 2;
-	for (int a = 1; a <= 9; a++) {
-		printf("%d X %d = %d\n", dan, a, dan * a);
+	for (int dan = 2; dan <= 3; dan++)
+	{
+		for (int i = 1; i<= 9; i++) 
+		{
+			printf("%d X %d = %d\n", dan, i, dan * i);
+		}
 	}
 }
