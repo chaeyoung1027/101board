@@ -4,6 +4,7 @@ void main(void)
 {
 	char str[20] = "Hello World";
 
-	for (int i = 0; i < 12; i++)
+	//단순하게 인덱스 값을 직접 계산함
+	for (int i = 0; i < sizeof(str); i++)
 		printf("%c", str[i]);
 }
