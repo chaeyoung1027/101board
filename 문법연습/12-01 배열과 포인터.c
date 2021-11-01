@@ -3,11 +3,13 @@
 void main(void)
 {
 	int arr[4];
-	printf("arr 0¹øÂ° °ø°£ÀÇ ÁÖ¼Ò : %p \n", &arr[0]);
-	printf("arr ¹è¿­ÀÇ ½ÃÀÛ ÁÖ¼Ò : %p \n", arr);
-	printf("arr 1¹øÂ° °ø°£ÀÇ ÁÖ¼Ò : %p \n\n", &arr[1]);
+	printf("arr 0ë²ˆì§¸ ê³µê°„ì˜ ì£¼ì†Œ : %p \n", &arr[0]);
+	printf("arr ë°°ì—´ì˜ ì‹œì‘ ì£¼ì†Œ : %p \n", arr);
+	printf("arr 1ë²ˆì§¸ ê³µê°„ì˜ ì£¼ì†Œ : %p \n\n", &arr[1]);
+	printf("arr 1ë²ˆì§¸ ê³µê°„ì˜ ì£¼ì†Œ : %p \n\n", arr+1);
 	char str[4];
-	printf("str 0¹øÂ° °ø°£ÀÇ ÁÖ¼Ò : %p \n", &str[0]);
-	printf("str ¹è¿­ÀÇ ½ÃÀÛ ÁÖ¼Ò : %p \n", str);
-	printf("str 1¹øÂ° °ø°£ÀÇ ÁÖ¼Ò : %p \n", &str[1]);
+	printf("str 0ë²ˆì§¸ ê³µê°„ì˜ ì£¼ì†Œ : %p \n", &str[0]);
+	printf("str ë°°ì—´ì˜ ì‹œì‘ ì£¼ì†Œ : %p \n", str);
+	printf("str 1ë²ˆì§¸ ê³µê°„ì˜ ì£¼ì†Œ : %p \n", &str[1]);
+	printf("str 1ë²ˆì§¸ ê³µê°„ì˜ ì£¼ì†Œ : %p \n", str+1);
 }
